@@ -11,7 +11,7 @@ public class items {
     private double price;
     private String img;
     private String category;
-    @Column( nullable = false , columnDefinition = " int default ")
+    @Column( nullable = false , columnDefinition = " int default '1' ")
     private int active;
 
 
@@ -59,6 +59,7 @@ public class items {
 
     public void setActive(int active) {
         this.active = active;
+        this.active=1;
     }
 
     public Long getProductId() {

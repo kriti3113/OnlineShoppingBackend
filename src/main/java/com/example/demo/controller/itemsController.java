@@ -14,6 +14,11 @@ public class itemsController {
     @Autowired
     ItemsRepository ItemsRepo;
 
+    @PostMapping("/post1")
+    public items createNote(@RequestBody items user1) {
+        return ItemsRepo.save(user1);
+    }
+
     @GetMapping("/get_cate/{category}")
     public List<items> getItem(@PathVariable( value = "category") String cate)
     {
